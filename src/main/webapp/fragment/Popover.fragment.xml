@@ -1,0 +1,15 @@
+<core:FragmentDefinition
+		xmlns="sap.m"
+		xmlns:core="sap.ui.core">
+	<ResponsivePopover
+			contentWidth="30%"
+			title="Комментарий"
+			class="sapUiPopupWithPadding"
+			placement="Bottom">
+		<content>
+			<FlexBox class="SapUiMediumMargin">
+				<Text text="{i18n>comment}"/>
+			</FlexBox>
+		</content>
+	</ResponsivePopover>
+</core:FragmentDefinition>

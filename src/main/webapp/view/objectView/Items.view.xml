@@ -1,0 +1,206 @@
+<mvc:View
+		controllerName="gagarin.controller.object.Items"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns="sap.m"
+		xmlns:u="sap.ui.unified"
+		xmlns:table="sap.ui.table"
+		xmlns:core="sap.ui.core">
+
+	<table:TreeTable
+			expandFirstLevel="false"
+			id="TreeTableBasic"
+			rows="{path:'/catalog/clothing', parameters: {arrayNames:['categories']}}"
+			selectionMode="None"
+			enableSelectAll="false"
+			ariaLabelledBy="title">
+		<table:toolbar>
+			<Toolbar>
+				<Title text="Позиции (2)" level="H2"/>
+				<CheckBox selected="true" text="Показывать цену поставщику"/>
+				<ToolbarSpacer/>
+				<SearchField width="auto" class="sapUiSmallMargin" placeholder="Поиск"/>
+				<Button
+						icon="sap-icon://full-screen"
+						press="handleButtonPress"/>
+				<Button
+						icon="sap-icon://upload"
+						press="handleButtonPress"/>
+				<Button
+						icon="sap-icon://excel-attachment"
+						press="handleButtonPress"/>
+				<Button
+						icon="sap-icon://action-settings"
+						press="handleButtonPress"/>
+			</Toolbar>
+		</table:toolbar>
+		<table:noData>
+			<Link
+					class="sapUiMediumMargin"
+					text="No Data found. Press here to reset all filters."
+					press="clearAllFilters"/>
+		</table:noData>
+		<table:columns>
+
+			<table:Column width="3em">
+				<Label text=""/>
+				<table:template>
+					<VBox>
+						<Text text=""/>
+					</VBox>
+				</table:template>
+			</table:Column>
+
+			<table:Column width="3em">
+				<Label text=""/>
+				<table:template>
+					<HBox justifyContent="Center">
+
+						<CheckBox visible="{= (${distributed} === 'true') ? false : true }"/>
+						<Text text="{position}" visible="{= ${position}.length>0 &amp;&amp; ${distributed} === 'true' }"/>
+						<!--{= (${/your/path/length} === 0 &amp;&amp; ${/your/path2} !== 0) ? true : false}-->
+
+					</HBox>
+				</table:template>
+			</table:Column>
+
+			<table:Column width="17em">
+				<Label text="Название"/>
+				<table:template>
+					<VBox>
+						<ObjectIdentifier title="{name}" text="{number}" level="H2"/>
+						<!--<Text text="Сумма по лоту: 12359 RUB"/>-->
+						<HBox>
+							<Button type="Transparent"
+									icon="sap-icon://payment-approval"
+									press="handleButtonPress"/>
+							<Button type="Transparent"
+									icon="sap-icon://addresses"
+									press="handleButtonPress"/>
+							<Button type="Transparent"
+									icon="sap-icon://comment"
+									press="handleButtonPress"/>
+						</HBox>
+					</VBox>
+				</table:template>
+			</table:Column>
+
+			<table:Column width="6em">
+				<Label text="Тип позиции"/>
+				<table:template>
+					<Text text="{type}"/>
+				</table:template>
+			</table:Column>
+
+			<table:Column width="13em">
+				<Label text="Группа материалов"/>
+				<table:template>
+					<Text text="{group}"/>
+				</table:template>
+			</table:Column>
+
+			<table:Column width="13%">
+				<Label text="ОЗМ/ОЗУ"/>
+				<table:template>
+					<Text text="{number}"/>
+				</table:template>
+			</table:Column>
+
+			<table:Column width="12%">
+				<Label text="Кол-во/Ед.изм"/>
+				<table:template>
+					<ObjectNumber number="{amount}" numberUnit="{currency}"/>
+				</table:template>
+			</table:Column>
+
+			<table:Column width="12%">
+				<Label text="Цена за ед. (без НДС)"/>
+				<table:template>
+					<u:Currency value="{amount1}" currency="{currency1}"/>
+				</table:template>
+			</table:Column>
+
+			<table:Column width="12%">
+				<Label text="Сумма"/>
+				<table:template>
+					<u:Currency value="{amount2}" currency="{currency2}"/>
+				</table:template>
+			</table:Column>
+
+
+			<table:Column width="12%">
+				<Label text="Дата поставки"/>
+				<table:template>
+					<Select
+							items="{path: '/sizes', templateShareable: true}"
+							selectedKey="{size}"
+							visible="{= !!${size}}"
+							forceSelection="false">
+						<core:Item key="{key}" text="{value}"/>
+					</Select>
+				</table:template>
+			</table:Column>
+
+		</table:columns>
+	</table:TreeTable>
+	<!--<table:Table-->
+	<!--rows="{/ProductCollection}"-->
+	<!--title="Products"-->
+	<!--selectionMode="Multi"-->
+	<!--visibleRowCount="7">-->
+	<!--<table:columns>-->
+	<!--<table:Column width="11rem">-->
+	<!--<Label text="Название" />-->
+	<!--<table:template>-->
+	<!--<Text text="{Name}"/>-->
+	<!--</table:template>-->
+	<!--</table:Column>-->
+	<!--<table:Column width="11rem">-->
+	<!--<Label text="Тип позиции" />-->
+	<!--<table:template>-->
+	<!--<Input value="{ProductId}"/>-->
+	<!--</table:template>-->
+	<!--</table:Column>-->
+	<!--<table:Column width="6rem" hAlign="End">-->
+	<!--<Label text="Группа материалов" />-->
+	<!--<table:template>-->
+	<!--<Label text="{Quantity}" />-->
+	<!--</table:template>-->
+	<!--</table:Column>-->
+	<!--<table:Column width="9rem">-->
+	<!--<Label text="ОЗМ/ОЗУ" />-->
+	<!--<table:template>-->
+	<!--<ObjectStatus text="{Status}" state="Success"/>-->
+	<!--</table:template>-->
+	<!--</table:Column>-->
+	<!--<table:Column width="9rem">-->
+	<!--<Label text="Кол-во/-->
+	<!--Ед.изм" />-->
+	<!--<table:template>-->
+	<!--<u:Currency value="{Price}" currency="{CurrencyCode}"/>-->
+	<!--</table:template>-->
+	<!--</table:Column>-->
+	<!--<table:Column width="12rem">-->
+	<!--<Label text="Цена за ед.-->
+	<!--(без НДС)" />-->
+	<!--<table:template>-->
+	<!--<ComboBox value="{SupplierName}" items="{/Suppliers}">-->
+	<!--<core:Item text="{Name}"/>-->
+	<!--</ComboBox>-->
+	<!--</table:template>-->
+	<!--</table:Column>-->
+	<!--<table:Column width="9rem">-->
+	<!--<Label text="Сумма" />-->
+	<!--<table:template>-->
+	<!--<Link text="Show Image" href="{ProductPicUrl}" target="_blank"/>-->
+	<!--</table:template>-->
+	<!--</table:Column>-->
+	<!--<table:Column width="9rem">-->
+	<!--<Label text="Дата-->
+	<!--поставки" />-->
+	<!--<table:template>-->
+	<!--<Button text="Show Details" press="handleDetailsPress"/>-->
+	<!--</table:template>-->
+	<!--</table:Column>-->
+	<!--</table:columns>-->
+	<!--</table:Table>-->
+</mvc:View>

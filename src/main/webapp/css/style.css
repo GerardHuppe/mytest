@@ -1,0 +1,52 @@
+body{
+	margin: 0;
+}
+
+.z .sapMPageHeader.sapMBar, .z .sapMPageHeader .sapMTB, .z .sapMPageHeader .sapMBarPH{
+	height: 6.8rem;
+}
+
+.z .sapMPage>.sapMPageHeader + section, .z .sapMPage>.sapMPageSubHeader + section, .z .sapMPage>.sapMPageHeader + .sapUiHiddenPlaceholder + section{
+	top: 6.8rem;
+}
+
+.z .sapMSemanticPage .sapMPageHeader .sapMBarRight{
+	text-align: left;
+	width: 100%;
+}
+
+.allowWrapping {
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+}
+
+.textBlock{
+	overflow-y: hidden;
+	height: 15em;
+}
+
+.z .italicsText {
+	font-style: italic;
+}
+
+
+/*.z .sapMListTbl .sapMText, .sapMListTbl .sapMLabel {
+	font-size: 0.875rem;
+	color: #2B7D2B;
+	font-weight: normal;
+}*/
+
+.z .noBorderBottom.sapMPanel .sapMPanelContent:not(.sapMPanelBGTransparent){
+	border-bottom: none;
+	padding: 1rem 0;
+}
+
+/*.containerInHeaderContent .sapMHdrCntrBtnCntr.Horizontal.sapMHdrCntrRight {*/
+	/*right: 2.5rem;*/
+/*}*/
+
+/*.containerInHeaderContent .sapMHdrCntrBtnCntr.Horizontal.sapMHdrCntrLeft{*/
+	/*width: 0;*/
+/*}*/
+

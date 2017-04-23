@@ -1,0 +1,8 @@
+<mvc:View
+		controllerName="gagarin.controller.object.WorkflowList"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns="sap.m" xmlns:l="sap.ui.layout"
+		xmlns:f="sap.ui.layout.form"
+		xmlns:core="sap.ui.core">
+	<Text text="WorkflowList edit"/>
+</mvc:View>

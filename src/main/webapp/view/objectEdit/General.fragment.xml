@@ -1,0 +1,127 @@
+<core:FragmentDefinition
+		xmlns:uxap="sap.uxap"
+		xmlns="sap.m" xmlns:l="sap.ui.layout"
+		xmlns:f="sap.ui.layout.form" xmlns:smartForm="sap.ui.comp.smartform" xmlns:smartField="sap.ui.comp.smartfield"
+		xmlns:core="sap.ui.core">
+	<uxap:ObjectPageSubSection id="GeneralObjectPageSubSection3" showTitle="false"
+							   mode="{state>/app/mode}">
+		<VBox width="100%">
+
+
+			<Panel expandable="true" expanded="false">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="Условия выбора"/>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<HBox class="allowWrapping" justifyContent="SpaceBetween">
+						<VBox width="30%" class="sapUiMediumMarginBottom">
+							<Text maxLines="8" text="Exorcizamus te, omnis immundus spiritus, omnis satanica potestas, omnis incursio infernalis adversarii, omnis legio, omnis congregatio et secta diabolica, in nomine et virtute Domini Nostri Jesu + Christi, eradicare et effugare a Dei Ecclesia, ab animabus ad imaginem Dei conditis ac pretioso divini Agni sanguine redemptis + . Non ultra audeas, serpens callidissime, decipere humanum genus, Dei Ecclesiam persequi, ac Dei electos excutere et cribrare sicut triticum + . Imperat tibi Deus altissimus + , cui in magna tua superbia te similem haberi adhuc praesumis; qui omnes homines vult salvos fieri et ad agnitionem veritaris venire. Imperat tibi Deus Pater + ; imperat tibi Deus Filius + ; imperat tibi Deus Spiritus Sanctus + . Imperat tibi majestas Christi, aeternum Dei Verbum, caro factum + , qui pro salute generis nostri tua invidia perditi, humiliavit semetipsum facfus hobediens usque ad mortem; qui Ecclesiam suam aedificavit supra firmam petram, et portas inferi adversus eam nunquam esse praevalituras edixit, cum ea ipse permansurus omnibus diebus usque ad consummationem saeculi. Imperat tibi sacramentum Crucis + , omniumque christianae fidei Mysteriorum virtus +. Imperat tibi excelsa Dei Genitrix Virgo Maria + , quae superbissimum caput tuum a primo instanti immaculatae suae conceptionis in sua humilitate contrivit. Imperat tibi fides sanctorum Apostolorum Petri et Pauli, et ceterorum Apostolorum + . Imperat tibi Martyrum sanguis, ac pia Sanctorum et Sanctarum omnium intercessio. Ergo, draco maledicte et omnis legio diabolica, adjuramus te per Deum + vivum, per Deum + verum, per Deum + sanctum, per Deum qui sic dilexit mundum, ut Filium suum unigenitum daret, ut omnes qui credit in eum non pereat, sed habeat vitam aeternam: cessa decipere humanas creaturas, eisque aeternae perditionis venenum propinare: desine Ecclesiae nocere, et ejus libertati laqueos injicere. Vade, satana, inventor et magister omnis fallaciae, hostis humanae salutis. Da locum Christo, in quo nihil invenisti de operibus tuis; da locum Ecclesiae uni, sanctae, catholicae, et apostolicae, quam Christus ipse acquisivit sanguine suo. Humiliare sub potenti manu Dei; contremisce et effuge, invocato a nobis sancto et terribili nomine Jesu, quem inferi tremunt, cui Virtutes caelorum et Potestates et Dominationes subjectae sunt; quem Cherubim et Seraphim indefessis vocibus laudant, dicentes: Sanctus, Sanctus, Sanctus Dominus Deus Sabaoth.
+V. Domine, exaudi orationem meam.
+R. Et clamor meus ad te veniat.
+[si fuerit saltem diaconus subjungat V. Dominus vobiscum.
+R. Et cum spiritu tuo.]
+Oremus. Deus coeli, Deus terrae, Deus Angelorum, Deus Archangelorum, Deus Patriarcharum, Deus Prophetarum, Deus Apostolorum, Deus Martyrum, Deus Confessorum, Deus Virginum, Deus qui potestatem habes donare vitam post mortem, requiem post laborem; quia non est Deus praeter te, nec esse potest nisi tu creator omnium visibilium et invisibilium, cujus regni non erit finis: humiIiter majestati gloriae tuae supplicamus, ut ab omni infernalium spirituum potestate, laqueo, deceptione et nequitia nos potenter liberare, et incolumes custodire digneris. Per Christum Dominum nostrum. Amen. Ab insidiis diaboli, libera nos, Domine. Ut Ecclesiam tuam secura tibi facias libertate servire, te rogamus, audi nos. Ut inimicos sanctae Ecclesiae humiliare digneris, te rogamus audi nos. Et aspergatur locus aqua benedicta."/>
+							<Link text="Больше" press=""/>
+						</VBox>
+
+						<VBox width="30%" class="sapUiMediumMarginBottom">
+							<Text maxLines="8"
+								  text="Conjuro &amp; confirmo super vos Angeli fortes Dei, &amp; sancti, in nomine Adonay, Eye, Eye, Eye, qui est ille, qui fuit, est &amp; erit, Eye, Abraye: &amp; in nomine Saday, Cados, Cados, Cados, alie sendentis super Cherubin, &amp; per nomen magnum ipsius Dei fortis &amp; potentis, exaltatique super omnes coelos, Eye, Saraye, plasmatoris seculorum, qui creavit mundum, coelum, terram, mare, &amp; omnia quae in eis sunt in primo die, &amp; sigillavit ea sancto nomine suo Phaa: &amp; per nomina sanctorum Angelorum, qui dominantur in quarto exercitu, &amp; serviunt coram potentissimo Salamia, Angelo magno &amp; honorato: &amp; per nomen stellae, quae est Sol, &amp; per signum, &amp; per immensum nomen Dei vivi, &amp; per nomina omnia praedicta, conjuro te Michael angele magne, qui es prepositus Diei Dominicae: &amp; per nomen Adona, Dei Israel, qui creavit mundum &amp; quicquid in eo est, quod pro melabores, &amp; ad moleas omnem meam petitionem, juxta meum velle &amp; votum meum, in negotio &amp; causa mea."/>
+							<Link text="Больше" press=""/>
+						</VBox>
+
+						<VBox width="30%" class="sapUiMediumMarginBottom">
+							<Text maxLines="8"
+								  text="Bene veneritis Spiritus, vel reges nobilissimi, quia vos vocavi per illum cui omne genu flectitur, coelestium, terrestrium &amp; infernorum: cujus in manu omnia regna regum sunt, nec est qui suae contrarius esse possit Majestati. Quatenus constringo vos, ut hic ante circulum visibes, affabiles permanetis, tamdiu tamque constantes, nec sint licentia mea recedatis, donec meam sine fallacia aliqua &amp; veredice perficiatis voluntatem, per potentiae illius virtutem, qui mare posuit terminum suum, quem praeterire non potest, &amp; lege illius potentiae, non periransit fines suos, Dei scilicet altissimi, regis, domini, qui cuncta creavit, Amen."/>
+							<Link text="Больше" press=""/>
+						</VBox>
+
+						<VBox width="30%" class="sapUiMediumMarginBottom">
+							<Text maxLines="8"
+								  text="Beralanensis, Baldachiensis, Paumachiae &amp; Apologiae sedes, per Reges potestaiesia magnanimas, ac principes praepotentes, genio Liachidae, ministri tartareae sedes: Primac, hic princeps sedis Apologiae nona cohorte: Ego vos invoco, &amp; invocando vos conjure, atque supernae Majestatis munitus virtute, potenter impero, per eum qui dixit, &amp; factum est, &amp; cui obediunt omnes creaturae: &amp; per hoc nomen ineffabile, Tetragrammaton Jehovah, in quo est plasmatum omne seculum, quo audito elementa corruunt, aer concutitur, mare retrograditur, ignis extinguitur, tera tremit, omnesque exercitus Coelestium, Terrestrium, &amp; Infernorum tremunt, turbantur &amp; corruunt: quatenus cito &amp; sine mora &amp; omni occasione remota, ab universis mundi partibus veniatis, &amp; rationabiliter de omnibus quaecunque interrogavero, respondeatis vos, &amp; veniatis pacifice, visibiles, &amp; affabiles: nunc &amp; sine mora manifestantes quod cupimus: conjurati per nomen aeterni vivi &amp; veri Dei Helioren, &amp; mandata nostra per ficientes, persistentes semper usque ad finem, &amp; intentionem meam, visibiles nobis, &amp; affabiles, clara voce nobis, intelligibile, &amp; sine omni ambiguitate."/>
+							<Link text="Больше" press=""/>
+						</VBox>
+
+						<VBox width="30%" class="sapUiMediumMarginBottom">
+							<Text maxLines="8"
+								  text="Fiat firmamentum in medio aquanim et separet aquas ab aquis, quae superius sicut quae inferius et quae iuferius sicut quae superius ad perpetranda miracula rei unius. Sol ejus pater est, luna mater et ventus hanc gestavit in utero suo, ascendit a terra ad coelum in terram descendit. Exorciso te creatura aqua, ut sis mihi speculum Dei vivi in operibus ejus et fons vitae et ablutio peccatonim. Amen"/>
+							<Link text="Больше" press=""/>
+						</VBox>
+
+						<VBox width="30%" class="sapUiMediumMarginBottom">
+							<Text maxLines="8"
+								  text="Satano! Oro te appare te rosto! Veni, Satano! Ter oro te! Veni, Satano! Oro te pro arte! Veni, Satano! Opera pra estro, Ater oro! Veni, Satano! Oro te! Appare te rosto! Veni, Satano! Amen"/>
+							<Link text="Больше" press=""/>
+						</VBox>
+
+						<VBox width="30%" class="sapUiMediumMarginBottom">
+							<Text maxLines="8"
+								  text="In isto sale sit sapientia et ab omni corruptione sicut mentes nostras et corpora nostra, per HOCHMAEL et in virtute ROUACH HOCHMAEL, recedant ab fsto fantasmata hulae, ut sit sal coelistis, subterrae salis, ut nutrietur bos triturans et addat spei nostrae cornua tauri volentis. Amen"/>
+							<Link text="Больше" press=""/>
+						</VBox>
+
+						<VBox width="30%" class="sapUiMediumMarginBottom">
+							<Text maxLines="8"
+								  text="Fiat firmamentum in medio aquanim et separet aquas ab aquis, quae superius sicut quae inferius et quae iuferius sicut quae superius ad perpetranda miracula rei unius. Sol ejus pater est, luna mater et ventus hanc gestavit in utero suo, ascendit a terra ad coelum in terram descendit. Exorciso te creatura aqua, ut sis mihi speculum Dei vivi in operibus ejus et fons vitae et ablutio peccatonim. Amen"/>
+							<Link text="Больше" press=""/>
+						</VBox>
+
+
+					</HBox>
+				</content>
+			</Panel>
+
+			<Panel expandable="true" expanded="false" class="sapUiLargeMarginTop">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="Условия оплаты"/>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<Table inset="false">
+						<headerToolbar>
+							<Toolbar>
+								<Title text="Участники рабочей группы" level="H2"/>
+							</Toolbar>
+						</headerToolbar>
+						<columns>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Позиции ликвидности"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Тип оплаты"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
+								<Text text="% оплаты"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+								<Text text="Базовая дата оплаты"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+								<Text text="Срок оплаты"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+								<Text text="Вид условия"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier title="Расх. на услуги доставки" text="12345678"
+													  titleActive="false"/>
+									<Text text="Аванс"/>
+									<Text text="40%"/>
+									<Text text="День начала действия договора"/>
+									<Text text="+20 дней\n1 платежный день"/>
+									<Text text="Нестандартный"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Panel>
+		</VBox>
+	</uxap:ObjectPageSubSection>
+</core:FragmentDefinition>

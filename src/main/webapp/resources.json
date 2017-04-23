@@ -1,0 +1,122 @@
+{
+    "resources": [
+        {
+            "name": "css/style.css"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "view/NotFound.view.xml"
+        },
+        {
+            "name": "view/Equipment.fragment.xml"
+        },
+        {
+            "name": "view/App.view.xml"
+        },
+        {
+            "name": "view/ObjectNotFound.view.xml"
+        },
+        {
+            "name": "view/Materials.fragment.xml"
+        },
+        {
+            "name": "view/ArriveValues.fragment.xml"
+        },
+        {
+            "name": "view/DepartValues.fragment.xml"
+        },
+        {
+            "name": "view/Worklist.view.xml"
+        },
+        {
+            "name": "view/Object.view.xml"
+        },
+        {
+            "name": "view/VariantManagement.fragment.xml"
+        },
+        {
+            "name": "custom/model/appModels.js"
+        },
+        {
+            "name": "custom/model/staticModel.json"
+        },
+        {
+            "name": "custom/class/EMultiInput.js"
+        },
+        {
+            "name": "custom/class/ERouter.js"
+        },
+        {
+            "name": "custom/class/Common.js"
+        },
+        {
+            "name": "custom/class/EComboBox.js"
+        },
+        {
+            "name": "custom/class/RouteLink.js"
+        },
+        {
+            "name": "custom/class/ButtonLink.js"
+        },
+        {
+            "name": "extended_runnable_file.html"
+        },
+        {
+            "name": "test.html"
+        },
+        {
+            "name": "favicon.ico"
+        },
+        {
+            "name": "controller/ErrorHandler.js"
+        },
+        {
+            "name": "controller/Object.controller.js"
+        },
+        {
+            "name": "controller/NotFound.controller.js"
+        },
+        {
+            "name": "controller/Worklist.controller.js"
+        },
+        {
+            "name": "controller/App.controller.js"
+        },
+        {
+            "name": "controller/BaseController.js"
+        },
+        {
+            "name": "i18n/i18n_ru.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": "localService/mockserver.js"
+        },
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "neo-app.json"
+        }
+    ]
+}

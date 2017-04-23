@@ -1,0 +1,240 @@
+<mvc:View controllerName="gagarin.controller.Object" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+		  xmlns:semantic="sap.m.semantic" xmlns:uxap="sap.uxap" xmlns:layout="sap.ui.layout"
+		  xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout"
+		  xmlns:f="sap.ui.layout.form" xmlns:table="sap.ui.table" xmlns:custom="gagarin.custom.class"
+		  xmlns:u="sap.ui.unified" xmlns:blocks="gagarin.block.object">
+	<semantic:FullscreenPage id="page" navButtonPress="onNavBack" showNavButton="false"
+							 busy="{objectView>/busy}"
+							 busyIndicatorDelay="{objectView>/delay}">
+		<semantic:customHeaderContent>
+			<HeaderContainer scrollStep="390" scrollTime="200" showDividers="false"
+							 class="containerInHeaderContent">
+				<TileContent class="sapUiSmallMarginBegin">
+					<content>
+						<NewsContent
+								contentText="Предоставление инициатором проекта ТТ/ТЗ"
+								subheader="August 21, 2013" press="press">
+						</NewsContent>
+					</content>
+				</TileContent>
+				<TileContent class="">
+					<content>
+						<NewsContent
+								contentText="Согласование Закупщиком окончательных ТТ/ТЗ"
+								subheader="August 22, 2013" press="press">
+						</NewsContent>
+					</content>
+				</TileContent>
+				<TileContent class="">
+					<content>
+						<NewsContent
+								contentText="Открытие Закупочной процедуры"
+								subheader="August 23, 2013" press="press">
+						</NewsContent>
+					</content>
+				</TileContent>
+				<TileContent class="">
+					<content>
+						<NewsContent
+								contentText="Отправка на техническую оценку"
+								subheader="August 24, 2013" press="press">
+						</NewsContent>
+					</content>
+				</TileContent>
+				<TileContent class="">
+					<content>
+						<NewsContent
+								contentText="Отправка на техническую оценку"
+								subheader="September 3, 2013" press="press">
+						</NewsContent>
+					</content>
+				</TileContent>
+				<TileContent class="">
+					<content>
+						<NewsContent
+								contentText="Отправка на техническую оценку"
+								subheader="September 4, 2013" press="press">
+						</NewsContent>
+					</content>
+				</TileContent>
+				<TileContent class="">
+					<content>
+						<NewsContent
+								contentText="Отправка на техническую оценку"
+								subheader="September 6, 2013" press="press">
+						</NewsContent>
+					</content>
+				</TileContent>
+			</HeaderContainer>
+		</semantic:customHeaderContent>
+
+		<semantic:content>
+			<uxap:ObjectPageLayout id="ObjectPageLayout" useIconTabBar="true" alwaysShowContentHeader="false"
+								   class="sapUiSizeCompact"
+								   enableLazyLoading="false">
+				<uxap:headerTitle>
+					<uxap:ObjectPageHeader id="headerForTest"
+										   headerDesign="Light"
+										   objectTitle="(49601030) Тестирование функционала закупочных процедур"
+										   showTitleSelector="false"
+										   titleSelectorPress="handleTitleSelectorPress"
+										   showMarkers="false"
+										   objectSubtitle="Тестирование функционала новой системы проведения закупочных процедур для нужд компании ПАО МегаФон и ДК"
+										   objectImageShape="Circle">
+						<uxap:actions>
+							<uxap:ObjectPageHeaderActionButton icon="sap-icon://edit" text="Редактировать"
+															   importance="High" press="onEditPress" hideText="false"
+															   hideIcon="true"/>
+							<uxap:ObjectPageHeaderActionButton icon="sap-icon://delete" text="Удалить" importance="High"
+															   hideText="false" hideIcon="true"/>
+							<uxap:ObjectPageHeaderActionButton icon="sap-icon://open-command-field" text="Открыть"
+															   importance="Low" hideText="false" hideIcon="true"/>
+							<uxap:ObjectPageHeaderActionButton icon="sap-icon://decline" text="Отменить"
+															   importance="Low" hideText="false" hideIcon="true"/>
+							<uxap:ObjectPageHeaderActionButton icon="sap-icon://checklist" text="Уточнить ТЗ"
+															   importance="Low" hideText="false" hideIcon="true"/>
+							<uxap:ObjectPageHeaderActionButton icon="sap-icon://detail-view" text="Открыть результат"
+															   importance="Low" hideText="false" hideIcon="true"/>
+							<uxap:ObjectPageHeaderActionButton icon="sap-icon://create" text="Создать новый этап"
+															   importance="Low" hideText="false" hideIcon="true"/>
+						</uxap:actions>
+						<uxap:breadCrumbsLinks>
+							<Link text="Page 1 a very long link" press="handleLink1Press"/>
+							<Link text="Page 2 long link" press="handleLink2Press"/>
+						</uxap:breadCrumbsLinks>
+					</uxap:ObjectPageHeader>
+				</uxap:headerTitle>
+				<uxap:headerContent>
+					<FlexBox width="100%" visible="{= (${state>/app/mode} === 'Collapsed')}">
+						<HBox justifyContent="SpaceBetween" width="100%" class="allowWrapping">
+							<VBox width="25em">
+								<HBox>
+									<Label text="Формат закупочной процедуры:"/>
+									<Text text="Открытый запрос цен" class="sapUiSmallMarginBegin"/>
+								</HBox>
+								<HBox>
+									<Label text="Форма проведения:"/>
+									<Text text="Открытый запрос цен" class="sapUiSmallMarginBegin"/>
+								</HBox>
+								<HBox>
+									<Label text="Группа материалов:"/>
+									<Text text="Открытый запрос цен" class="sapUiSmallMarginBegin"/>
+								</HBox>
+								<HBox>
+									<Label text="Уровень принятия решения:"/>
+									<Text text="Открытый запрос цен" class="sapUiSmallMarginBegin"/>
+								</HBox>
+							</VBox>
+							<VBox width="25em">
+								<HBox>
+									<Label text="Источник финансирования:"/>
+									<Text text="Открытый запрос цен" class="sapUiSmallMarginBegin"/>
+								</HBox>
+								<HBox>
+									<Label text="Срок действия решения:"/>
+									<Text text="Открытый запрос цен" class="sapUiSmallMarginBegin"/>
+								</HBox>
+								<HBox>
+									<Label text="Регистрационный номер:"/>
+									<Text text="Открытый запрос цен" class="sapUiSmallMarginBegin"/>
+								</HBox>
+							</VBox>
+							<VBox width="20em">
+								<ObjectStatus title="Сумма (без НДС)"/>
+								<ObjectNumber class="sapUiSmallMarginBottom" number="9721" unit="USD"/>
+							</VBox>
+							<VBox width="20em">
+								<ObjectStatus text="Проверка секретарем КК" state="None"/>
+								<Text text="Задержка не по вине закупщика:\n КД была на согласовании"/>
+							</VBox>
+						</HBox>
+					</FlexBox>
+				</uxap:headerContent>
+				<uxap:sections>
+					<uxap:ObjectPageSection id="GeneralObjectPageSection" title="Основная информация">
+						<uxap:subSections>
+							<core:Fragment fragmentName="gagarin.view.objectView.General" type="XML" visible="{= ${state>/app/mode} === 'Collapsed'}"/>
+							<core:Fragment fragmentName="gagarin.view.objectEdit.General" type="XML" visible="{= ${state>/app/mode} === 'Expanded'}"/>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="SuppliersObjectPageSection" title="Поставщики" showTitle="true">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="SuppliersObjectPageSubSection" showTitle="false"
+													   mode="{state>/app/mode}">
+								<blocks:Suppliers/>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="PlanObjectPageSection" title="План" showTitle="true">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="PlanObjectPageSubSection" showTitle="false"
+													   mode="{state>/app/mode}">
+								<blocks:Plan/>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="ItemsObjectPageSection" title="Позиции"
+											showTitle="true">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="ItemsObjectPageSubSection" showTitle="false"
+													   mode="{state>/app/mode}">
+								<blocks:Items/>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="DocumentsObjectPageSection" title="Документы"
+											showTitle="true">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="DocumentsObjectPageSubSection" showTitle="false"
+													   mode="{state>/app/mode}">
+								<blocks:Documents/>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="WorkflowListObjectPageSection" title="Лист согласования"
+											showTitle="true">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="WorkflowListObjectPageSubSection" showTitle="false"
+													   mode="{state>/app/mode}">
+								<blocks:WorkflowList/>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="LinkedObjectsObjectPageSection" title="Связанные объекты"
+											showTitle="true">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="LinkedObjectsObjectPageSubSection" showTitle="false"
+													   mode="{state>/app/mode}">
+								<blocks:LinkedObjects/>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="CommentsObjectPageSection" title="Комментарии"
+											showTitle="true">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="CommentsObjectPageSubSection" showTitle="false"
+													   mode="{state>/app/mode}">
+								<blocks:Comments/>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="ChangelogObjectPageSection" title="История изменений"
+											showTitle="true">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="ChangelogObjectPageSubSection" showTitle="false"
+													   mode="{state>/app/mode}">
+								<blocks:Changelog/>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+				</uxap:sections>
+			</uxap:ObjectPageLayout>
+		</semantic:content>
+		<semantic:cancelAction>
+			<semantic:CancelAction press="onSemanticButtonPress"/>
+		</semantic:cancelAction>
+		<semantic:saveAction>
+			<semantic:SaveAction press="onSemanticButtonPress"/>
+		</semantic:saveAction>
+	</semantic:FullscreenPage>
+</mvc:View>

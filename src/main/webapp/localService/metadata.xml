@@ -1,0 +1,691 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="Z_FL_ADDIT_INFO_SRV" xml:lang="ru" sap:schema-version="1">
+			<EntityType Name="Apiata" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Id"/>
+				</Key>
+				<Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Подробное описание" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="Flight" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Version"/>
+					<PropertyRef Name="Brdkey"/>
+					<PropertyRef Name="Bryear"/>
+				</Key>
+				<Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="7" sap:label="Версия" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Brdkey" Type="Edm.String" Nullable="false" MaxLength="32" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Bryear" Type="Edm.String" Nullable="false" MaxLength="4" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Recordmode" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Режим записи" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Taresu" Type="Edm.Time" Nullable="false" Precision="0" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Daresu" Type="Edm.DateTime" Precision="0" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Ddpseu" Type="Edm.DateTime" Precision="0" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Tdpseu" Type="Edm.Time" Nullable="false" Precision="0" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Tnacfa" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Flkeya" Type="Edm.String" Nullable="false" MaxLength="32" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Flkeyd" Type="Edm.String" Nullable="false" MaxLength="32" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Apiata" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Yeardp" Type="Edm.String" Nullable="false" MaxLength="4" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Yearar" Type="Edm.String" Nullable="false" MaxLength="4" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Serknd" Type="Edm.String" Nullable="false" MaxLength="1" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UserProc" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Обработчик" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Fltsts" Type="Edm.String" Nullable="false" MaxLength="1" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<NavigationProperty Name="eApiata" Relationship="Z_FL_ADDIT_INFO_SRV.FlightToApiata" FromRole="ToRole_FlightToApiata"
+					ToRole="FromRole_FlightToApiata"/>
+			</EntityType>
+			<EntityType Name="Contract" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Suppl"/>
+					<PropertyRef Name="Con_In"/>
+					<PropertyRef Name="Ser_Un"/>
+					<PropertyRef Name="Aciata"/>
+					<PropertyRef Name="Apiata"/>
+					<PropertyRef Name="Mov_Ty"/>
+					<PropertyRef Name="Version"/>
+				</Key>
+				<Property Name="Suppl" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+				<Property Name="Con_In" Type="Edm.String" Nullable="false" MaxLength="12" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+				<Property Name="Ser_Un" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+				<Property Name="Cnt_Datefrom" Type="Edm.DateTime" Precision="0" sap:label="Действительно с" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/>
+				<Property Name="Cnt_Dateto" Type="Edm.DateTime" Precision="0" sap:label="Действительно по" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/>
+				<Property Name="Aciata" Type="Edm.String" Nullable="false" MaxLength="2" sap:creatable="false" sap:updatable="false"/>
+				<Property Name="Apiata" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false"/>
+				<Property Name="Mov_Ty" Type="Edm.String" Nullable="false" MaxLength="1" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+				<Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="5 цифр" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/>
+				<Property Name="Brfidb" Type="Edm.String" Nullable="false" MaxLength="32" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+				<Property Name="Ftext" Type="Edm.String" Nullable="false" MaxLength="200" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+				<Property Name="Dateto" Type="Edm.DateTime" Precision="0" sap:label="Действительно по" sap:creatable="false" sap:updatable="false"/>
+				<Property Name="Datefrom" Type="Edm.DateTime" Precision="0" sap:label="Действительно с" sap:creatable="false" sap:updatable="false"/>
+				<Property Name="Con_Ex" Type="Edm.String" Nullable="false" MaxLength="50" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+				<Property Name="Bside" Type="Edm.String" Nullable="false" MaxLength="20" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+				<Property Name="Mandt" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+				<Property Name="Cona" Type="Edm.String" Nullable="false" MaxLength="50" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+				<NavigationProperty Name="eSuppl" Relationship="Z_FL_ADDIT_INFO_SRV.ContractToSuppl" FromRole="ToRole_ContractToSuppl"
+					ToRole="FromRole_ContractToSuppl"/>
+				<NavigationProperty Name="eAciata" Relationship="Z_FL_ADDIT_INFO_SRV.ContractToAciata" FromRole="ToRole_ContractToAciata"
+					ToRole="FromRole_ContractToAciata"/>
+				<NavigationProperty Name="eMoveType" Relationship="Z_FL_ADDIT_INFO_SRV.ContractToMoveType" FromRole="ToRole_ContractToMoveType"
+					ToRole="FromRole_ContractToMoveType"/>
+				<NavigationProperty Name="eApiata" Relationship="Z_FL_ADDIT_INFO_SRV.ContractToApiata" FromRole="ToRole_ContractToApiata"
+					ToRole="FromRole_ContractToApiata"/>
+				<NavigationProperty Name="eSer_Un" Relationship="Z_FL_ADDIT_INFO_SRV.ContractToSer_Un" FromRole="ToRole_ContractToSer_Un"
+					ToRole="FromRole_ContractToSer_Un"/>
+			</EntityType>
+			<EntityType Name="Suppl" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Id"/>
+				</Key>
+				<Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Подробное описание" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="Aciata" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Id"/>
+				</Key>
+				<Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="2" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Подробное описание" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="Ser_Un" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Id"/>
+				</Key>
+				<Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Подробное описание" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="MoveType" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="domvalue_l"/>
+				</Key>
+				<Property Name="domvalue_l" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/>
+				<Property Name="ddtext" Type="Edm.String" MaxLength="60" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+			</EntityType>
+			<EntityType Name="Flight_data" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Version"/>
+					<PropertyRef Name="Flkey"/>
+					<PropertyRef Name="Apiato"/>
+					<PropertyRef Name="Apiatd"/>
+				</Key>
+				<Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="7" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Flkey" Type="Edm.String" Nullable="false" MaxLength="32" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Recordmode" Type="Edm.String" Nullable="false" MaxLength="1" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="PasAll" Type="Edm.Double" Nullable="false" sap:unit="UPasAll" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UPasAll" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Inf" Type="Edm.Double" Nullable="false" sap:unit="UInf" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UInf" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="PasF" Type="Edm.Double" Nullable="false" sap:unit="ULoc_F" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UPasF" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="PasC" Type="Edm.Double" Nullable="false" sap:unit="UPasC" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UPasC" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="PasY" Type="Edm.Double" Nullable="false" sap:unit="UPasY" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UPasY" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="PasW" Type="Edm.Double" Nullable="false" sap:unit="UPasW" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UPasW" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Adul" Type="Edm.Double" Nullable="false" sap:unit="UAdul" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UAdul" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Chil" Type="Edm.Double" Nullable="false" sap:unit="UChil" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UChil" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="PasAld" Type="Edm.Double" Nullable="false" sap:unit="UPasAld" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UPasAld" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="PasFl" Type="Edm.Double" Nullable="false" sap:unit="UPasFl" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UPasFl" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="PasCld" Type="Edm.Double" Nullable="false" sap:unit="UPasCld" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UPasCld" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="PasYld" Type="Edm.Double" Nullable="false" sap:unit="UPasYld" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UPasYld" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="PasWld" Type="Edm.Double" Nullable="false" sap:unit="UpasWld" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UpasWld" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Aduld" Type="Edm.Double" Nullable="false" sap:unit="UAduld" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UAduld" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Chilld" Type="Edm.Double" Nullable="false" sap:unit="UChilld" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UChilld" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Infld" Type="Edm.Double" Nullable="false" sap:unit="UInfld" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UInfld" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Loc_Al" Type="Edm.Double" Nullable="false" sap:unit="Ulocal" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Ulocal" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Loc_F" Type="Edm.Double" Nullable="false" sap:unit="ULoc_F" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="ULoc_F" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Loc_C" Type="Edm.Double" Nullable="false" sap:unit="ULoc_C" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="ULoc_C" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Loc_Y" Type="Edm.Double" Nullable="false" sap:unit="ULoc_Y" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="ULoc_Y" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Loc_W" Type="Edm.Double" Nullable="false" sap:unit="ULoc_W" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="ULoc_W" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Payld" Type="Edm.Double" Nullable="false" sap:unit="UPayld" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UPayld" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="TweiBp" Type="Edm.Double" Nullable="false" sap:unit="UTweiBp" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UTweiBp" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="TwebPl" Type="Edm.Double" Nullable="false" sap:unit="UTwebPl" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UTwebPl" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="TweiCr" Type="Edm.Double" Nullable="false" sap:unit="UTweiCr" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UTweiCr" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="TweCrl" Type="Edm.Double" Nullable="false" sap:unit="UTweCrl" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UTweCrl" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="TweiMl" Type="Edm.Double" Nullable="false" sap:unit="UTweiMl" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UTweiMl" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="TweMll" Type="Edm.Double" Nullable="false" sap:unit="UTweMll" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UTweMll" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Ncral" Type="Edm.Double" Nullable="false" sap:unit="UNcral" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UNcral" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Natt" Type="Edm.Double" Nullable="false" sap:unit="UNatt" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UNatt" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="FueDep" Type="Edm.Double" Nullable="false" sap:unit="UFueDep" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UFueDep" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="FuelRf" Type="Edm.Double" Nullable="false" sap:unit="UFuelRf" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UFuelRf" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="FueArr" Type="Edm.Double" Nullable="false" sap:unit="UFueArr" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UFueArr" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="FueCls" Type="Edm.Double" Nullable="false" sap:unit="UFueCls" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UFueCls" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="NumLan" Type="Edm.Double" Nullable="false" sap:unit="UNumLan" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UNumLan" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Dist" Type="Edm.Double" Nullable="false" sap:unit="UDist" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UDist" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Flitm" Type="Edm.Double" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Flytm" Type="Edm.Double" Nullable="false" sap:unit="UFlytm" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UFlytm" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Parktm" Type="Edm.Double" Nullable="false" sap:unit="UParktm" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UParktm" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UFlitm" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Tstdp" Type="Edm.Double" Nullable="false" sap:unit="UTstdp" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Tstar" Type="Edm.Double" Nullable="false" sap:unit="UTstar" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UTstdp" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UTstar" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Warea" Type="Edm.Double" Nullable="false" sap:unit="UWarea" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UWarea" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Aciato" Type="Edm.String" Nullable="false" MaxLength="2" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Flttyp" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Flinum" Type="Edm.String" Nullable="false" MaxLength="6" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Fltype" Type="Edm.String" Nullable="false" MaxLength="1" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Trmorg" Type="Edm.String" Nullable="false" MaxLength="1" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Apiato" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Apiatd" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Trmdes" Type="Edm.String" Nullable="false" MaxLength="1" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Tnacfa" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Acftyp" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Darutc" Type="Edm.DateTime" Precision="0" sap:label="Метка времени" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Tarutc" Type="Edm.Time" Precision="0" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Darsch" Type="Edm.DateTime" Precision="0" sap:label="Метка времени" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Tarsch" Type="Edm.Time" Precision="0" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Daresu" Type="Edm.DateTime" Precision="0" sap:label="Метка времени" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Taresu" Type="Edm.Time" Precision="0" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Flidir" Type="Edm.String" MaxLength="1" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Altype" Type="Edm.String" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Ddputc" Type="Edm.DateTime" Precision="0" sap:label="Метка времени" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Tduptc" Type="Edm.Time" Precision="0" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Ddpsch" Type="Edm.DateTime" Precision="0" sap:label="Метка времени" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Tdpsch" Type="Edm.Time" Precision="0" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Ddpseu" Type="Edm.DateTime" Precision="0" sap:label="Метка времени" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Tdpseu" Type="Edm.Time" Precision="0" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Time" Type="Edm.Time" Precision="0" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Date" Type="Edm.DateTime" Precision="0" sap:label="Метка времени" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Flkeyp" Type="Edm.String" Nullable="false" MaxLength="32" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<NavigationProperty Name="eClist" Relationship="Z_FL_ADDIT_INFO_SRV.Flight_dataToFlight_clist" FromRole="ToRole_Flight_dataToFlight_clist"
+					ToRole="FromRole_Flight_dataToFlight_clist"/>
+				<NavigationProperty Name="eApiato" Relationship="Z_FL_ADDIT_INFO_SRV.Flight_dataToApiato" FromRole="ToRole_Flight_dataToApiato"
+					ToRole="FromRole_Flight_dataToApiato"/>
+				<NavigationProperty Name="eApiatd" Relationship="Z_FL_ADDIT_INFO_SRV.Flight_dataToApiatd" FromRole="ToRole_Flight_dataToApiatd"
+					ToRole="FromRole_Flight_dataToApiatd"/>
+				<NavigationProperty Name="eOper" Relationship="Z_FL_ADDIT_INFO_SRV.Flight_dataToOperations" FromRole="ToRole_Flight_dataToOperations"
+					ToRole="FromRole_Flight_dataToOperations"/>
+			</EntityType>
+			<EntityType Name="Flight_clist" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Brdkey"/>
+					<PropertyRef Name="Version"/>
+				</Key>
+				<Property Name="Brdkey" Type="Edm.String" Nullable="false" MaxLength="32" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="7" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Recordmode" Type="Edm.String" Nullable="false" MaxLength="1" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="PasC" Type="Edm.Double" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="PasF" Type="Edm.Double" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="PasW" Type="Edm.Double" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="PasY" Type="Edm.Double" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UPasC" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UPasF" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UPasW" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UPasY" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="PasAll" Type="Edm.Double" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UPasAll" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Inf" Type="Edm.Double" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UInf" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Adul" Type="Edm.Double" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UAdul" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Chil" Type="Edm.Double" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UChill" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="TweiCR" Type="Edm.Double" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UTweiCR" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="TweiML" Type="Edm.Double" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UTweiML" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="TweiBP" Type="Edm.Double" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="UTweiBP" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="Operations" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Version"/>
+					<PropertyRef Name="Brdkey"/>
+				</Key>
+				<Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="7" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Brdkey" Type="Edm.String" Nullable="false" MaxLength="32" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Oprtn" Type="Edm.String" Nullable="false" MaxLength="4" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="User_Un" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Opnumb" Type="Edm.String" Nullable="false" MaxLength="1" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Serch" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Posnmb" Type="Edm.String" Nullable="false" MaxLength="1" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Recordmode" Type="Edm.String" Nullable="false" MaxLength="1" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Quanfl" Type="Edm.Double" Nullable="false" sap:unit="Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Unit" Type="Edm.String" Nullable="false" MaxLength="3" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Time_F" Type="Edm.Time" Precision="0" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Time_T" Type="Edm.Time" Precision="0" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Sersts" Type="Edm.String" Nullable="false" MaxLength="1" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Bpsts" Type="Edm.String" Nullable="false" MaxLength="1" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Servtp" Type="Edm.String" Nullable="false" MaxLength="1" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Flkeyd" Type="Edm.String" Nullable="false" MaxLength="32" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="Flkeya" Type="Edm.String" Nullable="false" MaxLength="32" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<Property Name="DateFr" Type="Edm.DateTime" Precision="0" sap:label="Метка времени" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="DateTo" Type="Edm.DateTime" Precision="0" sap:label="Метка времени" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Comtxt" Type="Edm.String" Nullable="false" MaxLength="80" sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false"/>
+				<NavigationProperty Name="eFlight_Data" Relationship="Z_FL_ADDIT_INFO_SRV.OperationsToFlight_data" FromRole="ToRole_OperationsToFlight_data"
+					ToRole="FromRole_OperationsToFlight_data"/>
+			</EntityType>
+			<Association Name="ContractToSer_Un" sap:content-version="1">
+				<End Type="Z_FL_ADDIT_INFO_SRV.Ser_Un" Multiplicity="1" Role="FromRole_ContractToSer_Un"/>
+				<End Type="Z_FL_ADDIT_INFO_SRV.Contract" Multiplicity="*" Role="ToRole_ContractToSer_Un"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_ContractToSer_Un">
+						<PropertyRef Name="Id"/>
+					</Principal>
+					<Dependent Role="ToRole_ContractToSer_Un">
+						<PropertyRef Name="Ser_Un"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="Flight_dataToOperations" sap:content-version="1">
+				<End Type="Z_FL_ADDIT_INFO_SRV.Operations" Multiplicity="1" Role="FromRole_Flight_dataToOperations"/>
+				<End Type="Z_FL_ADDIT_INFO_SRV.Flight_data" Multiplicity="*" Role="ToRole_Flight_dataToOperations"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_Flight_dataToOperations">
+						<PropertyRef Name="Brdkey"/>
+						<PropertyRef Name="Version"/>
+					</Principal>
+					<Dependent Role="ToRole_Flight_dataToOperations">
+						<PropertyRef Name="Flkey"/>
+						<PropertyRef Name="Version"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="ContractToAciata" sap:content-version="1">
+				<End Type="Z_FL_ADDIT_INFO_SRV.Aciata" Multiplicity="1" Role="FromRole_ContractToAciata"/>
+				<End Type="Z_FL_ADDIT_INFO_SRV.Contract" Multiplicity="*" Role="ToRole_ContractToAciata"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_ContractToAciata">
+						<PropertyRef Name="Id"/>
+					</Principal>
+					<Dependent Role="ToRole_ContractToAciata">
+						<PropertyRef Name="Aciata"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="FlightToApiata" sap:content-version="1">
+				<End Type="Z_FL_ADDIT_INFO_SRV.Apiata" Multiplicity="1" Role="FromRole_FlightToApiata"/>
+				<End Type="Z_FL_ADDIT_INFO_SRV.Flight" Multiplicity="*" Role="ToRole_FlightToApiata"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_FlightToApiata">
+						<PropertyRef Name="Id"/>
+					</Principal>
+					<Dependent Role="ToRole_FlightToApiata">
+						<PropertyRef Name="Apiata"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="ContractToApiata" sap:content-version="1">
+				<End Type="Z_FL_ADDIT_INFO_SRV.Apiata" Multiplicity="1" Role="FromRole_ContractToApiata"/>
+				<End Type="Z_FL_ADDIT_INFO_SRV.Contract" Multiplicity="*" Role="ToRole_ContractToApiata"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_ContractToApiata">
+						<PropertyRef Name="Id"/>
+					</Principal>
+					<Dependent Role="ToRole_ContractToApiata">
+						<PropertyRef Name="Apiata"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="Flight_dataToApiato" sap:content-version="1">
+				<End Type="Z_FL_ADDIT_INFO_SRV.Apiata" Multiplicity="1" Role="FromRole_Flight_dataToApiato"/>
+				<End Type="Z_FL_ADDIT_INFO_SRV.Flight_data" Multiplicity="*" Role="ToRole_Flight_dataToApiato"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_Flight_dataToApiato">
+						<PropertyRef Name="Id"/>
+					</Principal>
+					<Dependent Role="ToRole_Flight_dataToApiato">
+						<PropertyRef Name="Apiato"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="Flight_dataToApiatd" sap:content-version="1">
+				<End Type="Z_FL_ADDIT_INFO_SRV.Apiata" Multiplicity="1" Role="FromRole_Flight_dataToApiatd"/>
+				<End Type="Z_FL_ADDIT_INFO_SRV.Flight_data" Multiplicity="*" Role="ToRole_Flight_dataToApiatd"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_Flight_dataToApiatd">
+						<PropertyRef Name="Id"/>
+					</Principal>
+					<Dependent Role="ToRole_Flight_dataToApiatd">
+						<PropertyRef Name="Apiatd"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="OperationsToFlight_data" sap:content-version="1">
+				<End Type="Z_FL_ADDIT_INFO_SRV.Flight_data" Multiplicity="1" Role="FromRole_OperationsToFlight_data"/>
+				<End Type="Z_FL_ADDIT_INFO_SRV.Operations" Multiplicity="*" Role="ToRole_OperationsToFlight_data"/>
+			</Association>
+			<Association Name="Flight_dataToFlight_clist" sap:content-version="1">
+				<End Type="Z_FL_ADDIT_INFO_SRV.Flight_clist" Multiplicity="1" Role="FromRole_Flight_dataToFlight_clist"/>
+				<End Type="Z_FL_ADDIT_INFO_SRV.Flight_data" Multiplicity="1" Role="ToRole_Flight_dataToFlight_clist"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_Flight_dataToFlight_clist">
+						<PropertyRef Name="Version"/>
+						<PropertyRef Name="Brdkey"/>
+					</Principal>
+					<Dependent Role="ToRole_Flight_dataToFlight_clist">
+						<PropertyRef Name="Version"/>
+						<PropertyRef Name="Flkey"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="ContractToMoveType" sap:content-version="1">
+				<End Type="Z_FL_ADDIT_INFO_SRV.MoveType" Multiplicity="1" Role="FromRole_ContractToMoveType"/>
+				<End Type="Z_FL_ADDIT_INFO_SRV.Contract" Multiplicity="*" Role="ToRole_ContractToMoveType"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_ContractToMoveType">
+						<PropertyRef Name="domvalue_l"/>
+					</Principal>
+					<Dependent Role="ToRole_ContractToMoveType">
+						<PropertyRef Name="Mov_Ty"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="ContractToSuppl" sap:content-version="1">
+				<End Type="Z_FL_ADDIT_INFO_SRV.Suppl" Multiplicity="1" Role="FromRole_ContractToSuppl"/>
+				<End Type="Z_FL_ADDIT_INFO_SRV.Contract" Multiplicity="*" Role="ToRole_ContractToSuppl"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_ContractToSuppl">
+						<PropertyRef Name="Id"/>
+					</Principal>
+					<Dependent Role="ToRole_ContractToSuppl">
+						<PropertyRef Name="Suppl"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityContainer Name="Z_FL_ADDIT_INFO_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+				<EntitySet Name="ApiataSet" EntityType="Z_FL_ADDIT_INFO_SRV.Apiata" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="FlightSet" EntityType="Z_FL_ADDIT_INFO_SRV.Flight" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="ContractSet" EntityType="Z_FL_ADDIT_INFO_SRV.Contract" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:searchable="true" sap:content-version="1"/>
+				<EntitySet Name="SupplSet" EntityType="Z_FL_ADDIT_INFO_SRV.Suppl" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="AciataSet" EntityType="Z_FL_ADDIT_INFO_SRV.Aciata" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="Ser_UnSet" EntityType="Z_FL_ADDIT_INFO_SRV.Ser_Un" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="MoveTypeSet" EntityType="Z_FL_ADDIT_INFO_SRV.MoveType" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="Flight_dataSet" EntityType="Z_FL_ADDIT_INFO_SRV.Flight_data" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="Flight_clistSet" EntityType="Z_FL_ADDIT_INFO_SRV.Flight_clist" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="OperationsSet" EntityType="Z_FL_ADDIT_INFO_SRV.Operations" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+				<AssociationSet Name="ContractToMoveTypeSet" Association="Z_FL_ADDIT_INFO_SRV.ContractToMoveType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1">
+					<End EntitySet="MoveTypeSet" Role="FromRole_ContractToMoveType"/>
+					<End EntitySet="ContractSet" Role="ToRole_ContractToMoveType"/>
+				</AssociationSet>
+				<AssociationSet Name="ContractToAciataSet" Association="Z_FL_ADDIT_INFO_SRV.ContractToAciata" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="AciataSet" Role="FromRole_ContractToAciata"/>
+					<End EntitySet="ContractSet" Role="ToRole_ContractToAciata"/>
+				</AssociationSet>
+				<AssociationSet Name="Flight_dataToApiatoSet" Association="Z_FL_ADDIT_INFO_SRV.Flight_dataToApiato" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1">
+					<End EntitySet="ApiataSet" Role="FromRole_Flight_dataToApiato"/>
+					<End EntitySet="Flight_dataSet" Role="ToRole_Flight_dataToApiato"/>
+				</AssociationSet>
+				<AssociationSet Name="ContractToSupplSet" Association="Z_FL_ADDIT_INFO_SRV.ContractToSuppl" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="SupplSet" Role="FromRole_ContractToSuppl"/>
+					<End EntitySet="ContractSet" Role="ToRole_ContractToSuppl"/>
+				</AssociationSet>
+				<AssociationSet Name="Flight_dataToFlight_clistSet" Association="Z_FL_ADDIT_INFO_SRV.Flight_dataToFlight_clist" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1">
+					<End EntitySet="Flight_clistSet" Role="FromRole_Flight_dataToFlight_clist"/>
+					<End EntitySet="Flight_dataSet" Role="ToRole_Flight_dataToFlight_clist"/>
+				</AssociationSet>
+				<AssociationSet Name="ContractToApiataSet" Association="Z_FL_ADDIT_INFO_SRV.ContractToApiata" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="ApiataSet" Role="FromRole_ContractToApiata"/>
+					<End EntitySet="ContractSet" Role="ToRole_ContractToApiata"/>
+				</AssociationSet>
+				<AssociationSet Name="OperationsToFlight_dataSet" Association="Z_FL_ADDIT_INFO_SRV.OperationsToFlight_data" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1">
+					<End EntitySet="Flight_dataSet" Role="FromRole_OperationsToFlight_data"/>
+					<End EntitySet="OperationsSet" Role="ToRole_OperationsToFlight_data"/>
+				</AssociationSet>
+				<AssociationSet Name="FlightToApiataSet" Association="Z_FL_ADDIT_INFO_SRV.FlightToApiata" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="ApiataSet" Role="FromRole_FlightToApiata"/>
+					<End EntitySet="FlightSet" Role="ToRole_FlightToApiata"/>
+				</AssociationSet>
+				<AssociationSet Name="ContractToSer_UnSet" Association="Z_FL_ADDIT_INFO_SRV.ContractToSer_Un" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="Ser_UnSet" Role="FromRole_ContractToSer_Un"/>
+					<End EntitySet="ContractSet" Role="ToRole_ContractToSer_Un"/>
+				</AssociationSet>
+				<AssociationSet Name="Flight_dataToOperationsSet" Association="Z_FL_ADDIT_INFO_SRV.Flight_dataToOperations" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1">
+					<End EntitySet="OperationsSet" Role="FromRole_Flight_dataToOperations"/>
+					<End EntitySet="Flight_dataSet" Role="ToRole_Flight_dataToOperations"/>
+				</AssociationSet>
+				<AssociationSet Name="Flight_dataToApiatdSet" Association="Z_FL_ADDIT_INFO_SRV.Flight_dataToApiatd" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1">
+					<End EntitySet="ApiataSet" Role="FromRole_Flight_dataToApiatd"/>
+					<End EntitySet="Flight_dataSet" Role="ToRole_Flight_dataToApiatd"/>
+				</AssociationSet>
+			</EntityContainer>
+			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self"
+				href="https://webidetesting8889209-i326574trial.dispatcher.hanatrial.ondemand.com/BWD/sap/opu/odata/sap/Z_FL_ADDIT_INFO_SRV/$metadata"/>
+			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version"
+				href="https://webidetesting8889209-i326574trial.dispatcher.hanatrial.ondemand.com/BWD/sap/opu/odata/sap/Z_FL_ADDIT_INFO_SRV/$metadata"/>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

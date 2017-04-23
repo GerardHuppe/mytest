@@ -1,0 +1,96 @@
+<mvc:View
+		controllerName="gagarin.controller.object.Plan"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns="sap.m" xmlns:l="sap.ui.layout"
+		xmlns:f="sap.ui.layout.form"
+		xmlns:core="sap.ui.core">
+	<Text text="Plan edit"/>
+	<FlexBox alignItems="End" justifyContent="Start">
+		<core:Icon src="sap-icon://fob-watch"/>
+		<Label text="Дата истечения действующей ЗП:" class="sapUiTinyMarginBegin"/>
+		<Label design="Bold" text="28 марта 2014" class="sapUiTinyMarginBegin"/>
+	</FlexBox>
+
+	<Table id="idProductsTable"
+		   inset="false"
+		   items="{
+		path: '/ProductCollection',
+		sorter: {
+			path: 'Name'
+		}
+	}">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="Шаги(10)" level="H2"/>
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+			<Column
+					width="12em">
+				<Text text="Название" />
+			</Column>
+			<Column
+					minScreenWidth="Tablet"
+					demandPopin="true">
+				<Text text="Базовый план" />
+			</Column>
+			<Column
+					minScreenWidth="Tablet"
+					demandPopin="true">
+				<Text text="Рабочий план" />
+			</Column>
+			<Column
+					minScreenWidth="Tablet"
+					demandPopin="true">
+				<Text text="Длительность" />
+			</Column>
+			<Column
+					minScreenWidth="Tablet"
+					demandPopin="true">
+				<Text text="Факт" />
+			</Column>
+			<Column
+					minScreenWidth="Tablet"
+					demandPopin="true">
+				<Text text="Отклонение" />
+			</Column>
+			<Column
+					minScreenWidth="Tablet"
+					demandPopin="true"
+					hAlign="Right">
+				<Text text="Прогноз" />
+			</Column>
+
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<ObjectIdentifier
+							title="{Name}"
+							text="{ProductId}"/>
+					<Text
+							text="{BasicPlan}" />
+					<Text
+							text="{WorkPlan}" />
+
+
+					<DatePicker
+						id = "DP3"
+						displayFormat = "short"
+						change="handleChange"/>
+
+					<Text
+							text="{Fact}" />
+					<ObjectStatus
+							text="{Deviation}"
+							state="Success"/>
+
+					<Text
+							text="{Forecast}" />
+
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+
+</mvc:View>

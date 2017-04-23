@@ -1,0 +1,441 @@
+<mvc:View
+		controllerName="gagarin.controller.object.Suppliers"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns="sap.m"
+		xmlns:l="sap.ui.layout"
+		xmlns:f="sap.ui.layout.form"
+		xmlns:cust="gagarin.custom.class"
+		xmlns:core="sap.ui.core">
+	<Panel class="noBorderBottom">
+		<Table id="idSupplierTable"
+			   mode="None">
+			<headerToolbar>
+				<Toolbar>
+					<Title text="Поставщики (8)" level="H2"/>
+					<ToolbarSpacer/>
+					<SearchField width="auto" class="sapUiSmallMargin" placeholder="Поиск"/>
+					<Button
+							icon="sap-icon://email"
+							press="handleButtonPress"/>
+					<Button
+							icon="sap-icon://action-settings"
+							press="handleButtonPress"/>
+				</Toolbar>
+			</headerToolbar>
+			<columns>
+
+				<Column width="2em">
+					<Text text=""/>
+				</Column>
+
+				<Column minScreenWidth="Tablet" demandPopin="true">
+					<Text text="Название"/>
+				</Column>
+
+				<Column width="7em" minScreenWidth="Tablet" demandPopin="true">
+					<Text text="ИНН"/>
+				</Column>
+
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Статус"/>
+				</Column>
+
+				<Column minScreenWidth="Tablet" demandPopin="true">
+					<Text text="Контактное лицо"/>
+				</Column>
+
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Допущен к ПКО"/>
+				</Column>
+
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Статус ЭБ"/>
+				</Column>
+
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Прошел ПКО"/>
+				</Column>
+
+			</columns>
+			<items>
+				<ColumnListItem vAlign="Top" selected="true">
+					<cells>
+
+						<Text text="1"/>
+
+						<ObjectIdentifier title="ОАО &quot;Ромашка&quot;" text="123456789"/>
+
+						<Text textAlign="End" text="7714698320"/>
+
+						<!--<ObjectStatus state="Success"  class="allowWrapping" text="Действующий"/>-->
+						<ObjectStatus state="Success" text="Действующий"/>
+
+						<VBox class="sapUiNoMargin">
+							<ObjectIdentifier title="Захарова С.А"/>
+							<Link text="zakharova@mail.ru"/>
+						</VBox>
+
+						<HBox width="100%" justifyContent="Center">
+							<FlexBox alignItems="Center" width="40px" justifyContent="Start">
+								<core:Icon color="#2B7D2B" src="sap-icon://accept"/>
+								<core:Icon visible="false" src="sap-icon://comment" class="sapUiTinyMarginBegin"/>
+							</FlexBox>
+						</HBox>
+
+						<ObjectStatus state="Success" text="Согласовано"/>
+
+						<HBox width="100%" justifyContent="Center">
+							<FlexBox alignItems="Center" width="40px" justifyContent="Start">
+								<core:Icon color="#2B7D2B" src="sap-icon://accept"/>
+								<core:Icon visible="false" src="sap-icon://comment"
+										   class="sapUiTinyMarginBegin"
+								/>
+							</FlexBox>
+						</HBox>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem vAlign="Top">
+					<cells>
+
+						<Text text="2"/>
+
+						<ObjectIdentifier title="ПАО &quot;Металл&quot;" text="123456789"/>
+
+						<Text hAlign="Right" text="7714698320"/>
+
+						<ObjectStatus state="Success"  text="Действующий"/>
+
+						<VBox class="sapUiNoMargin">
+							<ObjectIdentifier title="Смирнов О.А"/>
+							<Link text="smirnov@mail.ru"/>
+						</VBox>
+
+						<HBox justifyContent="Center" width="100%">
+							<FlexBox alignItems="Center" width="40px" justifyContent="Start">
+
+								<core:Icon color="#BB0000" src="sap-icon://decline"/>
+								<cust:HoverComment src="sap-icon://comment"
+												   class="sapUiTinyMarginBegin"
+												   allowHover="true"
+												   color="#427CAC"
+												   hoverText="hoverComment"
+												   hover="onHover"
+												   hoverOut="onHoverOut"/>
+							</FlexBox>
+						</HBox>
+
+						<ObjectStatus state="Success"  text="Согласовано"/>
+
+						<HBox justifyContent="Center" width="100%">
+							<FlexBox width="40px" alignItems="Center" justifyContent="Start">
+
+								<core:Icon color="#BB0000" src="sap-icon://decline"/>
+								<cust:HoverComment src="sap-icon://comment"
+												   class="sapUiTinyMarginBegin"
+												   allowHover="true"
+												   color="#427CAC"
+												   hoverText="hoverComment"
+												   hover="onHover"
+												   hoverOut="onHoverOut"/>
+							</FlexBox>
+						</HBox>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem vAlign="Top">
+					<cells>
+
+						<Text text="3"/>
+
+						<ObjectIdentifier title="ОАО &quot;Василек&quot;" text="123456789"/>
+
+						<Text hAlign="Right" text="7714691245"/>
+
+						<Text text="Потенциальный"/>
+						<VBox class="sapUiNoMargin">
+							<ObjectIdentifier title="Иванов К.В"/>
+							<Link text="ivanov@mail.ru"/>
+						</VBox>
+
+						<HBox width="100%" justifyContent="Center">
+							<FlexBox width="40px" alignItems="Center" justifyContent="Start">
+								<core:Icon color="#2B7D2B" src="sap-icon://accept"/>
+								<core:Icon visible="false" src="sap-icon://comment"
+										   class="sapUiTinyMarginBegin"
+								/>
+							</FlexBox>
+						</HBox>
+
+						<Text text="Ожидает согласования"/>
+
+						<HBox alignContent="Center" width="100%" justifyContent="Center">
+							<FlexBox alignItems="Center" width="40px" justifyContent="Start">
+								<core:Icon color="#2B7D2B" src="sap-icon://accept"/>
+								<core:Icon visible="false" src="sap-icon://comment"
+										   class="sapUiTinyMarginBegin"
+								/>
+							</FlexBox>
+						</HBox>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+
+		<!--<Table id="idProductsTable2"-->
+		<!--inset="false"-->
+		<!--items="{-->
+		<!--path: '/ProductCollection',-->
+		<!--sorter: {-->
+		<!--path: 'Name'-->
+		<!--}-->
+		<!--}">-->
+		<!--<headerToolbar>-->
+		<!--<Toolbar>-->
+		<!--<Title text="Products" level="H2"/>-->
+		<!--</Toolbar>-->
+		<!--</headerToolbar>-->
+		<!--<columns>-->
+		<!--<Column-->
+		<!--width="12em">-->
+		<!--<Text text="Product" />-->
+		<!--</Column>-->
+		<!--<Column-->
+		<!--minScreenWidth="Tablet"-->
+		<!--demandPopin="true">-->
+		<!--<Text text="Supplier" />-->
+		<!--</Column>-->
+		<!--<Column-->
+		<!--minScreenWidth="Tablet"-->
+		<!--demandPopin="true"-->
+		<!--hAlign="Right">-->
+		<!--<Text text="Dimensions" />-->
+		<!--</Column>-->
+
+		<!--</columns>-->
+		<!--<items>-->
+		<!--<ColumnListItem>-->
+		<!--<cells>-->
+		<!--<ObjectIdentifier-->
+		<!--title="{Name}"-->
+		<!--text="{ProductId}"/>-->
+		<!--<Text-->
+		<!--text="{SupplierName}" />-->
+		<!--<Text-->
+		<!--text="{Width} x {Depth} x {Height} {DimUnit}" />-->
+
+		<!--</cells>-->
+		<!--</ColumnListItem>-->
+		<!--</items>-->
+		<!--</Table>-->
+
+
+	</Panel>
+	<Panel expandable="true" expanded="false" class="sapUiLargeMarginTop noBorderBottom">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="Критерии ПКО" level="H1"/>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<Table id="idCriteriaTable"
+				   mode="None">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="Критерии ПКО (9)" level="H2"/>
+					</Toolbar>
+				</headerToolbar>
+
+				<columns>
+					<Column width="2em" minScreenWidth="Tablet" demandPopin="true">
+						<Text text=""/>
+					</Column>
+
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Text text="Критерии"/>
+					</Column>
+				</columns>
+
+				<items>
+					<ColumnListItem vAlign="Top">
+						<cells>
+
+							<Text text="1"/>
+
+							<Text maxLines="3" text="Опыт работы на рынке"/>
+
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem vAlign="Top">
+						<cells>
+
+							<Text text="2"/>
+
+							<Text maxLines="3" text="Возможность поставок требуемой Продукции"/>
+
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem vAlign="Top">
+						<cells>
+
+							<Text text="3"/>
+
+							<Text maxLines="3" text="Выполнение аналогичных работ для конкурентов"/>
+
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem vAlign="Top">
+						<cells>
+
+							<Text text="4"/>
+
+							<Text maxLines="3"
+								  text="Готовность оказывать услуги на условиях оплаты требуемых Заказчику"/>
+
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem vAlign="Top">
+						<cells>
+
+							<Text text="5"/>
+
+							<Text maxLines="3"
+								  text="Подтверждение готовности подписать соглашение о неразглашении (NDA)"/>
+
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem vAlign="Top">
+						<cells>
+
+							<Text text="6"/>
+
+							<Text maxLines="3"
+								  text="Наличие конфликта интересов по другим проектам выполняемых для МегаФон"/>
+
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem vAlign="Top">
+						<cells>
+
+							<Text text="7"/>
+
+							<Text maxLines="3" text="Наличие необходимых сертификатов, лицензий"/>
+
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem vAlign="Top">
+						<cells>
+
+							<Text text="8"/>
+
+							<Text maxLines="3" text="Наличие производственных мощностей"/>
+
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem vAlign="Top">
+						<cells>
+
+							<Text text="9"/>
+
+							<Text maxLines="3"
+								  text="Требования к статусу участника (например: производитель, интегратор, др.)"/>
+
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem vAlign="Top">
+						<cells>
+
+							<Text text="10"/>
+
+							<Text maxLines="3" text="Способность обеспечить необходимые условия поставки (например: DDP, РФ - актуально для иностранных производителей): наличие своей дочерней компании в РФ;
+наличие компании партнера в РФ"/>
+
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Panel>
+
+
+	<Panel expandable="true" expanded="false" class="sapUiLargeMarginTop noBorderBottom">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="Обязательные требования"/>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<Table inset="false">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="Поставщики (8)" level="H2"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column width="1em" minScreenWidth="Tablet" demandPopin="true">
+						<Text text=""/>
+					</Column>
+					<Column minScreenWidth="Tablet" width="auto" demandPopin="true">
+						<Text text="Краткое название"/>
+					</Column>
+					<Column minScreenWidth="Tablet" width="40%" demandPopin="true">
+						<Text text="Полное название поля"/>
+					</Column>
+					<Column minScreenWidth="Tablet" width="auto" demandPopin="true">
+						<Text text="Тип поля"/>
+					</Column>
+					<Column minScreenWidth="Tablet" hAlign="Center" width="auto" demandPopin="true">
+						<Text text="Обязательность заполнения"/>
+					</Column>
+					<Column minScreenWidth="Tablet" hAlign="Center" width="auto" demandPopin="true">
+						<Text text="Единое для всех позиций"/>
+					</Column>
+					<Column minScreenWidth="Tablet" hAlign="Center" width="auto" demandPopin="true">
+						<Text text="Доступно только организатору"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem vAlign="Top">
+						<cells>
+							<Text text="1"/>
+							<ObjectIdentifier title="Соответствие ТЗ"/>
+							<Text class="italicsText"
+								  text="Участник подтверждает, что Продукция предлагаемая Заказчику, полностью соответсвуют Техническим требованиям, предъявляемым Заказчиком в Приложении 2 к Приглашению"/>
+
+							<HBox alignItems="Center">
+								<Text text="Выпадающий список"/>
+								<core:Icon src="sap-icon://drop-down-list"/>
+							</HBox>
+
+							<core:Icon color="#2B7D2B" src="sap-icon://accept"/>
+							<core:Icon color="#2B7D2B" src="sap-icon://accept"/>
+							<core:Icon color="#2B7D2B" src="sap-icon://"/>
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem vAlign="Top">
+						<cells>
+							<Text text="2"/>
+							<ObjectIdentifier title="Условия оплаты"/>
+							<Text class="italicsText"
+								  text="Участник подтверждает свою готовность поставлять Продукцию на следующих условиях оплаты:  [указать требуемые условия оплаты]"/>
+							<Text text="Текст"/>
+							<core:Icon color="#2B7D2B" src="sap-icon://"/>
+							<core:Icon color="#2B7D2B" src="sap-icon://accept"/>
+							<core:Icon color="#2B7D2B" src="sap-icon://accept"/>
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem vAlign="Top">
+						<cells>
+							<Text text="3"/>
+							<ObjectIdentifier title="Сроки поставки"/>
+							<Text class="italicsText"
+								  text="Участник подтверждает свою готовность поставлять Продукцию с соблюдением следующих сроков:  [указать требуемые сроки]"/>
+							<Text text="Дата"/>
+							<core:Icon color="#2B7D2B" src="sap-icon://accept"/>
+							<core:Icon color="#2B7D2B" src="sap-icon://accept"/>
+							<core:Icon color="#2B7D2B" src="sap-icon://accept"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Panel>
+</mvc:View>

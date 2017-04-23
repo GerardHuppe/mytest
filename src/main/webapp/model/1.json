@@ -1,0 +1,356 @@
+{
+  "ProductCollection": [
+	{
+	  "ProductId": "1239102",
+	  "Name": "Power Projector 4713",
+	  "Category": "Projector",
+	  "SupplierName": "Titanium",
+	  "Description": "A very powerful projector with special features for Internet usability, USB",
+	  "WeightMeasure": 1467,
+	  "WeightUnit": "g",
+	  "Price": 856.49,
+	  "CurrencyCode": "EUR",
+	  "Status": "Available",
+	  "Quantity": 3,
+	  "UoM": "PC",
+	  "Width": 51,
+	  "Depth": 42,
+	  "Height": 18,
+	  "DimUnit": "cm",
+	  "WorkPlan": "-",
+	  "Durability": "14",
+	  "Fact": "01.07.2017",
+	  "Deviation": "3",
+	  "Forecast": "01.06.2017",
+	  "BasicPlan": "01.06.1984",
+	  "ProductPicUrl": "https://openui5.hana.ondemand.com/test-resources/sap/ui/demokit/explored/img/HT-6100.jpg"
+	}
+  ],
+  "ProductCollectionTwo": [
+	{
+	  "ProductId": "1239102",
+	  "Name": "Power Projector 4713",
+	  "Category": "Projector",
+	  "SupplierName": "Запрос для поставщиков",
+	  "DocVersion": "3",
+	  "DocType": "Документ поставщика",
+	  "AddDate": "04.01.2016",
+	  "EditDate": "04.01.2016",
+	  "EditAuthor": "Смирнов С.А",
+	  "Description": "A very powerful projector with special features for Internet usability, USB",
+	  "WeightMeasure": 1467,
+	  "WeightUnit": "g",
+	  "Price": 856.49,
+	  "CurrencyCode": "EUR",
+	  "Status": "Available",
+	  "Quantity": 3,
+	  "UoM": "PC",
+	  "Width": 51,
+	  "Depth": 42,
+	  "Height": 18,
+	  "DimUnit": "cm",
+	  "WorkPlan": "-",
+	  "Durability": "14",
+	  "Fact": "01.07.2017",
+	  "Deviation": "3",
+	  "Forecast": "01.06.2017",
+	  "BasicPlan": "01.06.1984",
+	  "ProductPicUrl": "https://openui5.hana.ondemand.com/test-resources/sap/ui/demokit/explored/img/HT-6100.jpg"
+	}
+  ],
+  "ProductCollectionStats": {
+	"Counts": {
+	  "Total": 14,
+	  "Weight": {
+		"Ok": 7,
+		"Heavy": 5,
+		"Overweight": 2
+	  }
+	},
+	"Groups": {
+	  "Category": {
+		"Projector": 1,
+		"Graphics Card": 2,
+		"Accessory": 4,
+		"Printer": 2,
+		"Monitor": 3,
+		"Laptop": 1,
+		"Keyboard": 1
+	  },
+	  "SupplierName": {
+		"Titanium": 3,
+		"Technocom": 3,
+		"Red Point Stores": 5,
+		"Very Best Screens": 3
+	  }
+	},
+	"Filters": [
+	  {
+		"type": "Category",
+		"values": [
+		  {
+			"text": "Projector",
+			"data": 1
+		  },
+		  {
+			"text": "Graphics Card",
+			"data": 2
+		  },
+		  {
+			"text": "Accessory",
+			"data": 4
+		  },
+		  {
+			"text": "Printer",
+			"data": 2
+		  },
+		  {
+			"text": "Monitor",
+			"data": 3
+		  },
+		  {
+			"text": "Laptop",
+			"data": 1
+		  },
+		  {
+			"text": "Keyboard",
+			"data": 1
+		  }
+		]
+	  },
+	  {
+		"type": "SupplierName",
+		"values": [
+		  {
+			"text": "Titanium",
+			"data": 3
+		  },
+		  {
+			"text": "Technocom",
+			"data": 3
+		  },
+		  {
+			"text": "Red Point Stores",
+			"data": 5
+		  },
+		  {
+			"text": "Very Best Screens",
+			"data": 3
+		  }
+		]
+	  }
+	]
+  },
+  "catalog": {
+	"clothing": {
+	  "categories": [
+		{
+		  "distributed": "true",
+		  "position": "",
+		  "level": "",
+		  "name": "Нераспределенные позиции",
+		  "info": "Нераспределенные позиции",
+		  "type": "",
+		  "group": "",
+		  "categories": [
+			{
+			  "distributed": "false",
+			  "position": "",
+			  "name": "10 Portable DVD Player",
+			  "number": 100000025,
+			  "size": "S",
+			  "type": "ТМЦ",
+			  "amount": 23,
+			  "currency": "см",
+			  "amount1": 13456,
+			  "currency1": "RUB",
+			  "amount2": 309488,
+			  "currency2": "RUB",
+			  "group": "Серверное оборудование"
+			},
+			{
+			  "distributed": "false",
+			  "position": "",
+			  "name": "Astro Phone 6",
+			  "number": 100000026,
+			  "size": "M",
+			  "type": "ТМЦ",
+			  "amount": 23,
+			  "currency": "шт",
+			  "amount1": 390,
+			  "currency1": "RUB",
+			  "amount2": 8970,
+			  "currency2": "RUB",
+			  "group": "Серверное оборудование"
+			},
+			{
+			  "distributed": "false",
+			  "position": "",
+			  "name": "Beam Breaker B-2",
+			  "number": 100000025,
+			  "size": "L",
+			  "type": "Услуги",
+			  "amount": 4,
+			  "currency": "см",
+			  "amount1": 80,
+			  "currency1": "USD",
+			  "amount2": 320,
+			  "currency2": "USD",
+			  "group": "Серверное оборудование"
+			},
+			{
+			  "distributed": "false",
+			  "position": "",
+			  "name": "Beam Breaker B-1",
+			  "number": 100000026,
+			  "size": "M",
+			  "type": "Услуги",
+			  "amount": 9,
+			  "currency": "м",
+			  "amount1": 603455,
+			  "currency1": "RUB",
+			  "amount2": 810445,
+			  "currency2": "RUB",
+			  "group": "Серверное оборудование"
+			}
+		  ]
+		},
+		{
+		  "distributed": "true",
+		  "position": "",
+		  "level": "",
+		  "name": "Лот №1",
+		  "number": "",
+		  "info": "Сумма по лоту: 12359 RUB",
+		  "type": "",
+		  "group": "Серверное оборудование",
+		  "categories": [
+			{
+			  "distributed": "true",
+			  "position": "1",
+			  "name": "10 Portable DVD Player",
+			  "number": 100000025,
+			  "size": "S",
+			  "type": "ТМЦ",
+			  "amount": 23,
+			  "currency": "см",
+			  "amount1": 13456,
+			  "currency1": "RUB",
+			  "amount2": 309488,
+			  "currency2": "RUB",
+			  "group": "Серверное оборудование"
+			},
+			{
+			  "distributed": "true",
+			  "position": "2",
+			  "name": "Astro Phone 6",
+			  "number": 100000026,
+			  "size": "M",
+			  "type": "ТМЦ",
+			  "amount": 23,
+			  "currency": "шт",
+			  "amount1": 390,
+			  "currency1": "RUB",
+			  "amount2": 8970,
+			  "currency2": "RUB",
+			  "group": "Серверное оборудование"
+			},
+			{
+			  "distributed": "true",
+			  "position": "3",
+			  "name": "Beam Breaker B-2",
+			  "number": 100000025,
+			  "size": "L",
+			  "type": "Услуги",
+			  "amount": 4,
+			  "currency": "см",
+			  "amount1": 80,
+			  "currency1": "USD",
+			  "amount2": 320,
+			  "currency2": "USD",
+			  "group": "Серверное оборудование"
+			},
+			{
+			  "distributed": "true",
+			  "position": "4",
+			  "name": "Beam Breaker B-1",
+			  "number": 100000026,
+			  "size": "M",
+			  "type": "Услуги",
+			  "amount": 9,
+			  "currency": "м",
+			  "amount1": 603455,
+			  "currency1": "RUB",
+			  "amount2": 810445,
+			  "currency2": "RUB",
+			  "group": "Серверное оборудование"
+			}
+		  ]
+		},
+		{
+		  "distributed": "true",
+		  "position": "",
+		  "level": "1",
+		  "name": "Лот №2",
+		  "number": "",
+		  "info": "Сумма по лоту: 12359 RUB",
+		  "type": "",
+		  "group": "Серверное оборудование",
+		  "categories": [
+			{
+			  "distributed": "true",
+			  "position": "1",
+			  "name": "Black T-shirt",
+			  "number": 100000026,
+			  "amount": 9.99,
+			  "currency": "USD",
+			  "size": "XL",
+			  "type": "ТМЦ",
+			  "group": "Серверное оборудование"
+			},
+			{
+			  "distributed": "true",
+			  "position": "2",
+			  "name": "Polo T-shirt",
+			  "number": 100000026,
+			  "amount": 47.99,
+			  "currency": "USD",
+			  "size": "M",
+			  "type": "ТМЦ",
+			  "group": "Серверное оборудование"
+			},
+			{
+			  "distributed": "true",
+			  "position": "3",
+			  "name": "White Shirt",
+			  "number": 100000026,
+			  "amount": 103.99,
+			  "currency": "USD",
+			  "size": "L",
+			  "type": "ТМЦ",
+			  "group": "Серверное оборудование"
+			}
+		  ]
+		}
+	  ]
+	}
+  },
+  "sizes": [
+	{
+	  "key": "XS",
+	  "value": "Extra Small"
+	},
+	{
+	  "key": "S",
+	  "value": "Small"
+	},
+	{
+	  "key": "M",
+	  "value": "Medium"
+	},
+	{
+	  "key": "L",
+	  "value": "Large"
+	}
+  ]
+}

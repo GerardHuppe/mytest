@@ -1,0 +1,130 @@
+<mvc:View
+		controllerName="gagarin.controller.object.Changelog"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns="sap.m" xmlns:l="sap.ui.layout"
+		xmlns:f="sap.ui.layout.form"
+		xmlns:core="sap.ui.core" xmlns:suite="sap.suite.ui.commons">
+	<Panel>
+		<VBox>
+			<Label text="Process Flow sample - zooming buttons and highlighted items"/>
+			<HBox>
+				<Button text="Zoom In" press="onZoomIn"/>
+				<Button text="Zoom Out" press="onZoomOut"/>
+				<Button text="Display Highlight Path" press="onHighlightPath"/>
+				<Button text="Update Model" press="onUpdateModel"/>
+			</HBox>
+		</VBox>
+		<suite:ProcessFlow id="processflow1" scrollable="false" foldedCorners="true" nodePress="onNodePress"
+						   nodeTitlePress="onNodeTitlePress" nodes="{/nodes}" lanes="{/lanes}">
+			<suite:nodes>
+				<suite:ProcessFlowNode laneId="{lane}" nodeId="{id}" title="{title}"
+									   titleAbbreviation="{titleAbbreviation}"
+									   isTitleClickable="{isTitleClickable}" children="{children}" state="{state}"
+									   stateText="{stateText}" texts="{texts}" highlighted="{highlighted}"
+									   focused="{focused}"/>
+			</suite:nodes>
+			<suite:lanes>
+				<suite:ProcessFlowLaneHeader laneId="{id}" iconSrc="{icon}" text="{label}" position="{position}"/>
+			</suite:lanes>
+		</suite:ProcessFlow>
+	</Panel>
+
+	<Table inset="false">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="Изменения в процедуре (5)" level="H2"/>
+				<ToolbarSpacer/>
+				<CheckBox selected="false" text="Только по лотам/позициям"/>
+
+				<SearchField width="auto" class="sapUiSmallMargin" placeholder="Поиск"/>
+				<Button
+						icon="sap-icon://full-screen"
+						press="handleButtonPress"/>
+				<Button
+						icon="sap-icon://action-settings"
+						press="handleButtonPress"/>
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+			<Column minScreenWidth="Tablet" demandPopin="true">
+				<Text text="Вкладка /Лот/ позиция"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true">
+				<Text text="Поле"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true">
+				<Text text="Старое значение"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true">
+				<Text text="Новое значение"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true">
+				<Text text="Действие"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true">
+				<Text text="Автор изменений"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
+				<Text text="Дата изменения"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem vAlign="Top">
+				<cells>
+					<Text text="Основная информация"/>
+					<ObjectIdentifier title="Формат ЗП"/>
+					<Text text="ЗуЕИ"/>
+					<Text text=""/>
+					<Button type="Transparent" icon="sap-icon://delete"/>
+					<Text text="Смирнов А.В"/>
+					<Text text="23.12.2017"/>
+				</cells>
+
+			</ColumnListItem>
+			<ColumnListItem vAlign="Top">
+				<cells>
+					<Text text="Основная информация"/>
+					<ObjectIdentifier title="Формат ЗП"/>
+					<Text text="ЗуЕИ"/>
+					<Text text="Делегирование"/>
+					<Button type="Transparent" icon="sap-icon://edit"/>
+					<Text text="Смирнов А.В"/>
+					<Text text="23.12.2017"/>
+				</cells>
+			</ColumnListItem>
+			<ColumnListItem vAlign="Top">
+				<cells>
+					<Text text="Основная информация"/>
+					<ObjectIdentifier title="Источник финансирования"/>
+					<Text text=""/>
+					<Text text="Базовый бюджет"/>
+					<Button type="Transparent" icon="sap-icon://add"/>
+					<Text text="Смирнов А.В"/>
+					<Text text="23.12.2017"/>
+				</cells>
+			</ColumnListItem>
+			<ColumnListItem vAlign="Top">
+				<cells>
+					<Text text="Основная информация"/>
+					<ObjectIdentifier title="Формат ЗП"/>
+					<Text text="ЗуЕИ"/>
+					<Text text="Делегирование"/>
+					<Button type="Transparent" icon="sap-icon://edit"/>
+					<Text text="Смирнов А.В"/>
+					<Text text="23.12.2017"/>
+				</cells>
+			</ColumnListItem>
+			<ColumnListItem vAlign="Top">
+				<cells>
+					<Text text="Основная информация"/>
+					<ObjectIdentifier title="Источник финансирования"/>
+					<Text text=""/>
+					<Text text="Базовый бюджет"/>
+					<Button type="Transparent" icon="sap-icon://add"/>
+					<Text text="Смирнов А.В"/>
+					<Text text="23.12.2017"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</mvc:View>

@@ -1,0 +1,403 @@
+<mvc:View
+		xmlns:smartField="sap.ui.comp.smartfield"
+		controllerName="gagarin.controller.object.Suppliers"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns="sap.m" xmlns:l="sap.ui.layout"
+		xmlns:f="sap.ui.layout.form"
+		xmlns:core="sap.ui.core">
+
+
+	<Panel class="noBorderBottom">
+
+		<Table id="idSupplierEditTable"
+			   enableBusyIndicator="true"
+			   mode="Delete">
+			<headerToolbar>
+				<Toolbar>
+					<Title text="Поставщики (8)" level="H2"/>
+					<ToolbarSpacer/>
+					<SearchField width="auto" class="sapUiSmallMargin" placeholder="Поиск"/>
+					<Button
+							icon="sap-icon://add"
+							press="handleButtonPress"/>
+					<Button
+							icon="sap-icon://upload"
+							press="handleButtonPress"/>
+					<Button
+							icon="sap-icon://action-settings"
+							press="handleButtonPress"/>
+				</Toolbar>
+			</headerToolbar>
+			<columns>
+
+				<Column width="1em" minScreenWidth="Tablet" demandPopin="true">
+					<Text text=""/>
+				</Column>
+
+				<Column minScreenWidth="Tablet" demandPopin="true">
+					<Text text="Название"/>
+				</Column>
+
+				<Column minScreenWidth="Tablet" demandPopin="true">
+					<Text text="ИНН"/>
+				</Column>
+
+				<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true">
+					<Text text="Статус"/>
+				</Column>
+
+				<Column minScreenWidth="Tablet" demandPopin="true">
+					<Text text="Контактное лицо"/>
+				</Column>
+
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+
+						<Text text="1"/>
+
+						<ObjectIdentifier title="ОАО &quot;Ромашка&quot;" text="123456789"/>
+
+						<Text text="7714698320"/>
+
+						<ObjectStatus text="Действующий" state="Success"/>
+
+						<VBox class="sapUiNoMargin">
+							<ObjectIdentifier title="Захарова С.А"/>
+							<Link text="zakharova@mail.ru"/>
+						</VBox>
+
+
+						<!--<HBox class="sapUiTinyMarginTopBottom" width="100%" justifyContent="Center">
+							<FlexBox alignItems="Center" width="60px" justifyContent="Start">
+								<Switch type="AcceptReject" state="true"/>
+								<core:Icon class="sapUiTinyMargin" src="sap-icon://comment" tooltip="{i18n>comment}"/>
+							</FlexBox>
+						</HBox>
+
+						<HBox alignItems="Center">
+							<Select width="auto">
+
+								<core:Item text="Согласовано"/>
+								<core:Item text="Не согласовано"/>
+								<core:Item text="Ожидает согласования"/>
+							</Select>
+							<core:Icon class="sapUiTinyMargin" src="sap-icon://comment" tooltip="Static"/>
+						</HBox>
+
+						<HBox class="sapUiTinyMarginTopBottom" width="100%" justifyContent="Center">
+							<FlexBox alignItems="Center" width="60px" justifyContent="Start">
+								<Switch type="AcceptReject" state="true"/>
+								<core:Icon class="sapUiTinyMargin" src="sap-icon://comment" tooltip="Static"/>
+							</FlexBox>
+						</HBox>-->
+
+
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+
+						<Text text="2"/>
+
+						<ObjectIdentifier title="ПАО &quot;Металл&quot;" text="123456789"/>
+
+						<Text text="7714698320"/>
+
+						<Text class="successText" text="Действующий"/>
+
+						<VBox class="sapUiNoMargin">
+							<ObjectIdentifier title="Смирнов О.А"/>
+							<Link text="smirnov@mail.ru"/>
+						</VBox>
+
+
+						<!--<HBox  justifyContent="Center" width="100%">-->
+						<!--<FlexBox alignItems="Center" width="40px" justifyContent="Start">-->
+
+						<!--<core:Icon color="#BB0000" src="sap-icon://decline"/>-->
+						<!--<cust:HoverComment src="sap-icon://comment"-->
+						<!--class="sapUiTinyMarginBegin"-->
+						<!--allowHover="true"-->
+						<!--color="#427CAC"-->
+						<!--hoverText="hoverComment"-->
+						<!--hover="onHover"/>-->
+						<!--</FlexBox>-->
+						<!--</HBox>-->
+
+						<!--<ObjectStatus state="Success" class="allowWrapping" text="Согласовано"/>-->
+
+						<!--<HBox  justifyContent="Center" width="100%">-->
+						<!--<FlexBox width="40px" alignItems="Center" justifyContent="Start">-->
+
+						<!--<core:Icon color="#BB0000" src="sap-icon://decline"/>-->
+						<!--<cust:HoverComment src="sap-icon://comment"-->
+						<!--class="sapUiTinyMarginBegin"-->
+						<!--allowHover="true"-->
+						<!--color="#427CAC"-->
+						<!--hoverText="hoverComment"-->
+						<!--hover="onHover"/>-->
+						<!--</FlexBox>-->
+						<!--</HBox>-->
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+
+						<Text text="3"/>
+
+						<ObjectIdentifier title="ОАО &quot;Василек&quot;" text="123456789"/>
+
+						<Text text="7714691245"/>
+
+						<Text text="Потенциальный"/>
+
+						<VBox class="sapUiNoMargin">
+							<ObjectIdentifier title="Иванов К.В"/>
+							<Link text="ivanov@mail.ru"/>
+						</VBox>
+
+
+						<!--<HBox  width="100%" justifyContent="Center">-->
+						<!--<FlexBox width="40px" alignItems="Center" justifyContent="Start">-->
+						<!--<core:Icon color="#2B7D2B" src="sap-icon://accept"/>-->
+						<!--<core:Icon visible="false" src="sap-icon://comment"-->
+						<!--class="sapUiTinyMarginBegin"-->
+						<!--/>-->
+						<!--</FlexBox>-->
+						<!--</HBox>-->
+
+						<!--<ObjectStatus state="None" class="allowWrapping" text="Ожидает согласования"/>-->
+
+						<!--<HBox  alignContent="Center" width="100%"  justifyContent="Center">-->
+						<!--<FlexBox alignItems="Center" width="40px" justifyContent="Start">-->
+						<!--<core:Icon color="#2B7D2B" src="sap-icon://accept"/>-->
+						<!--<core:Icon visible="false" src="sap-icon://comment"-->
+						<!--class="sapUiTinyMarginBegin"-->
+						<!--/>-->
+						<!--</FlexBox>-->
+						<!--</HBox>-->
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Panel>
+
+
+	<Panel expandable="true" expanded="false" class="sapUiLargeMarginTop noBorderBottom">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="Критерии ПКО" level="H1"/>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<Table mode="Delete" id="idCriteriaTable"
+				   inset="false">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="Критерии ПКО (9)" level="H2"/>
+						<ToolbarSpacer/>
+						<Button
+								icon="sap-icon://add"
+								press="onAddRow"/>
+					</Toolbar>
+				</headerToolbar>
+
+				<columns>
+					<Column width="2rem" minScreenWidth="Tablet" demandPopin="true">
+						<Text text=""/>
+					</Column>
+
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Text text="Критерии"/>
+					</Column>
+				</columns>
+
+
+				<items>
+
+					<ColumnListItem>
+						<cells>
+
+							<Text text="1"/>
+							<MultiInput width="95%" value="Опыт работы на рынке" id="idCriteriaField"/>
+
+
+						</cells>
+					</ColumnListItem>
+
+					<ColumnListItem>
+						<cells>
+
+							<Text text="2"/>
+
+							<MultiInput width="95%" value="Возможность поставок требуемой Продукции"/>
+
+
+						</cells>
+					</ColumnListItem>
+
+					<ColumnListItem>
+						<cells>
+
+							<Text text="3"/>
+
+							<MultiInput width="95%" value="Выполнение аналогичных работ для конкурентов"/>
+
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem>
+						<cells>
+
+							<Text text="4"/>
+
+							<MultiInput width="95%"
+										value="Готовность оказывать услуги на условиях оплаты требуемых Заказчику"/>
+
+
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem>
+						<cells>
+
+							<Text text="5"/>
+
+							<MultiInput width="95%"
+										value="Подтверждение готовности подписать соглашение о неразглашении (NDA)"/>
+
+
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem>
+						<cells>
+
+							<Text text="6"/>
+
+							<MultiInput width="95%"
+										value="Наличие конфликта интересов по другим проектам выполняемых для МегаФон"/>
+
+
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem>
+						<cells>
+
+							<Text text="7"/>
+
+							<MultiInput width="95%" value="Наличие необходимых сертификатов, лицензий"/>
+
+
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem>
+						<cells>
+
+							<Text text="8"/>
+
+							<MultiInput width="95%" value="Наличие производственных мощностей"/>
+
+
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem>
+						<cells>
+
+							<Text text="9"/>
+
+							<MultiInput width="95%"
+										value="Требования к статусу участника (например: производитель, интегратор, др.)"/>
+
+
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem>
+						<cells>
+
+							<Text text="10"/>
+
+							<MultiInput width="95%" value="Способность обеспечить необходимые условия поставки (например: DDP, РФ - актуально для иностранных производителей): наличие своей дочерней компании в РФ;
+наличие компании партнера в РФ"/>
+
+
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Panel>
+	<Panel expandable="true" expanded="false" class="sapUiLargeMarginTop noBorderBottom">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="Обязательные требования"/>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<Table mode="Delete"
+				   inset="false"
+			>
+				<headerToolbar>
+					<Toolbar>
+						<Title text="Поставщики (8)" level="H2"/>
+						<ToolbarSpacer/>
+						<Button
+								icon="sap-icon://add"
+								press="onAddRow"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column width="1em" minScreenWidth="Tablet" demandPopin="true">
+						<Text text=""/>
+					</Column>
+					<Column minScreenWidth="Tablet" width="8em" demandPopin="true">
+						<Text text="Краткое название"/>
+					</Column>
+					<Column minScreenWidth="Tablet" width="30%" demandPopin="true">
+						<Text text="Полное название поля"/>
+					</Column>
+					<Column minScreenWidth="Tablet" width="14em" demandPopin="true">
+						<Text text="Тип поля"/>
+					</Column>
+					<Column minScreenWidth="Tablet" width="auto" hAlign="Center" demandPopin="true">
+						<Text text="Обязательность заполнения"/>
+					</Column>
+					<Column minScreenWidth="Tablet" width="auto" hAlign="Center" demandPopin="true">
+						<Text text="Единое для всех позиций"/>
+					</Column>
+					<Column minScreenWidth="Tablet" width="auto" hAlign="Center" demandPopin="true">
+						<Text text="Доступно только организатору"/>
+					</Column>
+
+				</columns>
+				<items>
+					<ColumnListItem type="Detail" detailPress="onEditPress">
+						<cells>
+							<Text text="1"/>
+							<TextArea value="Соответствие ТЗ"/>
+
+
+							<TextArea class="italicsText" width="100%"
+									  rows="4"
+									  value="Участник подтверждает, что Продукция предлагаемая Заказчику, полностью соответсвуют Техническим требованиям, предъявляемым Заказчиком в Приложении 2 к Приглашению"/>
+
+
+							<ComboBox change="onChangeSelect" width="14em" value="" enabled="true">
+								<core:Item text="Выпадающий список"/>
+								<core:Item text="Текст"/>
+								<core:Item text="Дата"/>
+								<core:Item text="Число"/>
+							</ComboBox>
+
+
+							<Switch type="AcceptReject" class="sapUiSmallMarginBegin" state="true"/>
+							<Switch type="AcceptReject" class="sapUiSmallMarginBegin" state="true"/>
+							<Switch type="AcceptReject" class="sapUiSmallMarginBegin" state="true"/>
+
+
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Panel>
+</mvc:View>
